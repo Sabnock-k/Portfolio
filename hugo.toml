@@ -1,4 +1,4 @@
-baseURL = "https://sabnock-k.pages.dev/"
+baseURL = "https://sabnock-k.dev/"
 languageCode = "en-us"
 title = "Rafael B. Patiño"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap", "section", "page", "404"]
