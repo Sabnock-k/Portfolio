@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-label="Hookkey">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0d2018"/><stop offset="1" stop-color="#0a0f14"/></linearGradient></defs>
+  <rect width="400" height="200" fill="url(#g)"/>
+  <g fill="none" stroke="#00e599" stroke-width="2" opacity="0.9">
+    <rect x="120" y="70" width="160" height="70" rx="8"/>
+    <g fill="#00e599" stroke="none" opacity="0.85">
+      <rect x="132" y="82" width="16" height="16" rx="3"/><rect x="154" y="82" width="16" height="16" rx="3"/>
+      <rect x="176" y="82" width="16" height="16" rx="3"/><rect x="198" y="82" width="16" height="16" rx="3"/>
+      <rect x="220" y="82" width="16" height="16" rx="3"/><rect x="242" y="82" width="16" height="16" rx="3"/>
+      <rect x="132" y="104" width="16" height="16" rx="3"/><rect x="154" y="104" width="16" height="16" rx="3"/>
+      <rect x="176" y="104" width="60" height="16" rx="3" opacity="0.6"/><rect x="242" y="104" width="16" height="16" rx="3"/>
+    </g>
+  </g>
+  <path d="M300 60 q22 0 22 22 v18 a14 14 0 1 1 -14 -14" fill="none" stroke="#00e599" stroke-width="5" stroke-linecap="round"/>
+  <text x="200" y="175" font-family="monospace" font-size="15" fill="#5de0ad" text-anchor="middle" letter-spacing="3">keystroke &gt; log</text>
+</svg>

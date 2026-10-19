@@ -1,0 +1,114 @@
+# All site content lives here. Edit this file, not the template.
+# Entries marked "PLACEHOLDER" are examples to replace or delete.
+
+name: Rafael B. Patiño
+role: Software Engineer
+bio: >
+  From hunting security vulnerabilities to shipping full stack products.
+  That security background now drives how I build: secure, end-to-end
+  web applications from database to UI with React, Node.js and ASP.NET.
+  Sole developer on a production clearance system at Alliance Software.
+  1st place at Alliance Jumpstart, 2nd place at the UC CCS Days Hackathon.
+location: Cebu City, Philippines
+
+links:
+  resume: resume.pdf
+  linkedin: https://www.linkedin.com/in/rafael-pati%C3%B1o-7b2080381
+  github: https://github.com/Sabnock-k
+  email: rafael.b.patino@gmail.com
+
+# icon = devicon path (https://devicon.dev). Leave empty for a generic icon.
+# dark: true = black logo, inverted in dark mode.
+skills:
+  - { name: Python, icon: python/python-original }
+  - { name: C#, icon: csharp/csharp-original }
+  - { name: JavaScript, icon: javascript/javascript-original }
+  - { name: TypeScript, icon: typescript/typescript-original }
+  - { name: SQL, icon: azuresqldatabase/azuresqldatabase-original }
+  - { name: React, icon: react/react-original }
+  - { name: Node.js, icon: nodejs/nodejs-original }
+  - { name: Express, icon: express/express-original, dark: true }
+  - { name: ASP.NET, icon: dotnetcore/dotnetcore-original }
+  - { name: Vite, icon: vitejs/vitejs-original }
+  - { name: Tailwind, icon: tailwindcss/tailwindcss-original }
+  - { name: SQL Server, icon: microsoftsqlserver/microsoftsqlserver-plain }
+  - { name: PostgreSQL, icon: postgresql/postgresql-original }
+  - { name: Neon, icon: "" }
+  - { name: Firebase, icon: firebase/firebase-original }
+  - { name: Azure DevOps, icon: azuredevops/azuredevops-original }
+  - { name: Git, icon: git/git-original }
+
+competencies: [AI Integration, Auth Systems, REST APIs, Secure Backend, UI/UX, Agile/Scrum]
+highlight: [AI Integration]   # competencies shown as a glowing badge
+
+experience:
+  - title: Alliance Software Inc. — Jumpstart Program (1st Place)
+    role: Frontend Developer
+    date: 2025 – 2026
+    place: Cebu City
+    points:
+      - Helped develop a <b>secure</b> C# web application from concept to launch.
+      - Fixed UI and functional bugs across multiple features, improving stability and UX.
+      - Built responsive UI components with React, JavaScript, HTML and CSS/Tailwind.
+  - title: UC CCS Days Hackathon 2025 — 2nd Place
+    role: Full Stack Developer
+    date: 2023 – 2024
+    place: University of Cebu
+    points:
+      - Built frontend UI and backend features for the team project.
+      - Integrated APIs and fixed major bugs under time pressure.
+      - Shipped a functional MVP with a small agile team.
+
+education:
+  - school: University of Cebu – Main Campus
+    degree: BS Information Technology
+    date: 2025 – 2026
+    note: Systems Integration, Cloud Computing, Data Structures & Algorithms
+  - school: College of Technological Sciences – Cebu
+    degree: Senior High School — TVL-ICT (Computer Programming)
+    date: 2021 – 2022
+    note: ""
+
+certificates:
+  - name: IBM AI Fundamentals
+  - name: Introduction to Cybersecurity & Penetration Testing
+  - name: "Job Ready: Employability Skills — Wadhwani Foundation (May 2026)"
+    url: https://skilling.wadhwanifoundation.org/
+
+projects:
+  - name: Hookkey
+    role: Security Research · Proof of Concept
+    image: "images/hookkey.svg"
+    tags: [Python, Keyboard Hooks, Discord Webhook]
+    summary: An educational, software-only keystroke-capture proof of concept built to study input-hooking techniques. Authorized-use-only, with a disclaimer and a deliberately small, readable payload.
+    url: https://github.com/Sabnock-k/Hookkey
+  - name: MalImage
+    role: Security Research · Proof of Concept
+    image: "images/malimage.svg"
+    tags: [Python, Steganography]   # EDIT: confirm stack
+    summary: "Security research proof of concept exploring image-based payload techniques. A harmless malware that uses a common obfuscation technique by pretending to be a picture of a cute dog.."
+    url: https://github.com/Sabnock-k/MalImage
+  - name: 3DSCrypt
+    role: Security Research · Tooling
+    image: "images/3dscrypt.svg"
+    tags: [Python, Cryptography, AES]
+    summary: "A decryptor for Nintendo 3DS game ROMs. It detects how a ROM is encrypted, unlocks its parts with the right AES keys, and rewrites the file so it reads as fully decrypted."
+    url: https://github.com/Sabnock-k/3DSCrypt
+  - name: CampusFinder-AI
+    role: Semi-Full Stack Developer
+    image: ""   # images live in static/images/, never in data/
+    tags: [React, Node.js, PostgreSQL, OpenAI, Neon]
+    summary: AI-powered lost-and-found platform. Embeds item descriptions and matches user prompts by meaning with semantic similarity search.
+    url: ""     # PLACEHOLDER: live demo or repo link
+  - name: ClearanceApp
+    role: Full Stack Developer Intern · Alliance Software
+    image: ""
+    tags: [React, ASP.NET, MS SQL Server, Azure DevOps]
+    summary: Sole developer on an employee clearance system. Added login, automatic account deactivation and approver configuration.
+    url: ""
+  - name: Lamoy Development Initiative
+    role: Frontend Developer
+    image: ""
+    tags: [React, Node.js, ASP.NET, PostgreSQL]
+    summary: Built the React frontend and helped refactor the codebase to Separation of Concerns, backed by thorough test cases.
+    url: "https://github.com/CryoYohan/Lamoy-Simple-Food-Ordering-System"

@@ -1,0 +1,106 @@
+{{ $r := hugo.Data.resume -}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ $r.name }} — {{ $r.role }}</title>
+  <meta name="description" content="{{ $r.bio }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top">{{ $r.name }}</a>
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="mailto:{{ $r.links.email }}">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="intro" id="about">
+    <div class="intro-card">
+      <div class="intro-head">
+      <h1>{{ $r.name }}</h1>
+      <p class="links">
+        <a href="{{ $r.links.resume | relURL }}" target="_blank" rel="noopener" aria-label="Resume" title="Resume"><i class="fa-solid fa-file-lines"></i></a>
+        <a href="{{ $r.links.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="{{ $r.links.github }}" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:{{ $r.links.email }}" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </p>
+      </div>
+      <p class="muted">{{ $r.role }} · {{ $r.location }}</p>
+      <p>{{ $r.bio }}</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="carousel">
+      <div class="track">
+        {{ range $i, $_ := seq 2 }}{{ range $r.skills }}
+        <div class="skill{{ if .dark }} invert{{ end }}"{{ if eq $i 1 }} aria-hidden="true"{{ end }}>
+          {{ with .icon }}<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/{{ . }}.svg" alt="" loading="lazy">{{ else }}<i class="fa-solid fa-database"></i>{{ end }}
+          <span>{{ .name }}</span>
+        </div>
+        {{ end }}{{ end }}
+      </div>
+    </div>
+    <div class="tags">{{ range $r.competencies }}{{ if in $r.highlight . }}<span class="tag tag-hi"><i class="fa-solid fa-wand-magic-sparkles"></i> {{ . }}</span>{{ else }}<span class="tag">{{ . }}</span>{{ end }}{{ end }}</div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    {{ range $r.experience }}
+    <article class="entry">
+      <div class="entry-head"><h3>{{ .title }}</h3><span class="muted">{{ .date }}</span></div>
+      <p class="muted">{{ .role }} · {{ .place }}</p>
+      <ul>{{ range .points }}<li>{{ . | safeHTML }}</li>{{ end }}</ul>
+    </article>
+    {{ end }}
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      {{ range $r.projects }}
+      <article class="card">
+        <div class="card-img"{{ with .image }} style="background-image:url('{{ . | relURL }}')"{{ end }}>{{ if not .image }}<span>{{ .name }}</span>{{ end }}</div>
+        <div class="card-body">
+          <h3>{{ .name }}</h3>
+          <p class="muted small">{{ .role }}</p>
+          <div class="tags">{{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}</div>
+          <p>{{ .summary }}</p>
+          {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">Learn more →</a>{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education &amp; Certificates</h2>
+    {{ range $r.education }}
+    <article class="entry">
+      <div class="entry-head"><h3>{{ .school }}</h3><span class="muted">{{ .date }}</span></div>
+      <p class="muted">{{ .degree }}</p>
+      {{ with .note }}<p class="small">{{ . }}</p>{{ end }}
+    </article>
+    {{ end }}
+    <ul>{{ range $r.certificates }}<li>{{ with .url }}<a href="{{ . }}">{{ end }}{{ .name }}{{ if .url }}</a>{{ end }}</li>{{ end }}</ul>
+  </section>
+
+</main>
+
+<footer class="foot muted small">© {{ now.Year }} {{ $r.name }} · Built with Hugo · <a href="{{ $r.links.github }}" target="_blank" rel="noopener">GitHub</a></footer>
+
+<nav class="rail" aria-label="Sections">
+  {{ range slice (slice "about" "About") (slice "skills" "Skills") (slice "experience" "Experience") (slice "projects" "Projects") (slice "education" "Education") }}
+  <a href="#{{ index . 0 }}"><span>{{ index . 1 }}</span></a>
+  {{ end }}
+</nav>
+</body>
+</html>

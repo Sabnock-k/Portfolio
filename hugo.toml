@@ -1,0 +1,4 @@
+baseURL = "https://Sabnock-k.dev/"
+locale = "en-us"
+title = "Rafael B. Patiño"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "section", "page", "404"]
