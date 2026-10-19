@@ -1,4 +1,4 @@
-baseURL = "https://sabnock-k.dev/"
+baseURL = "https://sabnock-k.github.io/Portfolio/"
 languageCode = "en-us"
 title = "Rafael B. Patiño"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap", "section", "page", "404"]
