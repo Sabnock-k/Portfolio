@@ -1,4 +1,4 @@
 baseURL = "https://sabnock-k.pages.dev/"
-locale = "en-us"
+languageCode = "en-us"
 title = "Rafael B. Patiño"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap", "section", "page", "404"]
