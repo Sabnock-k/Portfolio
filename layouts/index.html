@@ -82,7 +82,7 @@
   </section>
 
   <section id="education">
-    <h2>Education &amp; Certificates</h2>
+    <h2>Education</h2>
     {{ range $r.education }}
     <article class="entry">
       <div class="entry-head"><h3>{{ .school }}</h3><span class="muted">{{ .date }}</span></div>
@@ -90,6 +90,10 @@
       {{ with .note }}<p class="small">{{ . }}</p>{{ end }}
     </article>
     {{ end }}
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates &amp; Awards</h2>
     <ul>{{ range $r.certificates }}<li>{{ with .url }}<a href="{{ . }}">{{ end }}{{ .name }}{{ if .url }}</a>{{ end }}</li>{{ end }}</ul>
   </section>
 
@@ -98,7 +102,7 @@
 <footer class="foot muted small">© {{ now.Year }} {{ $r.name }} · Built with Hugo · <a href="{{ $r.links.github }}" target="_blank" rel="noopener">GitHub</a></footer>
 
 <nav class="rail" aria-label="Sections">
-  {{ range slice (slice "about" "About") (slice "skills" "Skills") (slice "experience" "Experience") (slice "projects" "Projects") (slice "education" "Education") }}
+  {{ range slice (slice "about" "About") (slice "skills" "Skills") (slice "experience" "Experience") (slice "projects" "Projects") (slice "education" "Education") (slice "certificates" "Certificates") }}
   <a href="#{{ index . 0 }}"><span>{{ index . 1 }}</span></a>
   {{ end }}
 </nav>
